@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 600px;
+    margin: 50px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+form {
+    margin-top: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+button[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 16px;
+}
+
+button[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+a {
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+    color: #007bff;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+    </style>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Water Quality Prediction</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Water Quality Prediction</h1>
+        <form action="/predict" method="post">
+            <label for="ph">pH:</label>
+            <input type="number" id="ph" name="ph" step="0.01" required>
+           
+            <label for="iron">Iron:</label>
+            <input type="number" id="iron" name="iron" step="0.01" min="0" required>
+
+            <label for="nitrate">Nitrate:</label>
+            <input type="number" id="nitrate" name="nitrate" step="0.01" min="0" required>
+
+            <label for="chloride">Chloride:</label>
+            <input type="number" id="chloride" name="chloride" step="0.01" min="0" required>
+
+            <label for="lead">Lead:</label>
+            <input type="number" id="lead" name="lead" step="0.01" min="0" required>
+
+            <label for="zinc">Zinc:</label>
+            <input type="number" id="zinc" name="zinc" step="0.01" min="0" required>
+
+            <label for="turbidity">Turbidity:</label>
+            <input type="number" id="turbidity" name="turbidity" step="0.01" min="0" required>
+
+            <label for="fluoride">Fluoride:</label>
+            <input type="number" id="fluoride" name="fluoride" step="0.01" min="0" required>
+
+            <label for="copper">Copper:</label>
+            <input type="number" id="copper" name="copper" step="0.01" min="0" required>
+
+            <label for="sulfate">Sulfate:</label>
+            <input type="number" id="sulfate" name="sulfate" step="0.01" min="0" required>
+
+            <label for="chlorine">Chlorine:</label>
+            <input type="number" id="chlorine" name="chlorine" step="0.01" min="0" required>
+
+            <label for="manganese">Manganese:</label>
+            <input type="number" id="manganese" name="manganese" step="0.01" min="0" required>
+
+            <label for="total_dissolved_solids">Total Dissolved Solids:</label>
+            <input type="number" id="total_dissolved_solids" name="total_dissolved_solids" step="0.01" min="0" required>
+
+            <button type="submit">Predict</button>
+        </form>
+    </div>
+</body>
+</html>
+
